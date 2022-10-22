@@ -1,13 +1,11 @@
 spring:
   datasource:
-#    url: jdbc:h2:mem:mydb
     url: jdbc:mysql://127.0.0.1:3306/pass_local?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
     username: pass_local
     password: passlocal123
     driver-class-name: com.mysql.cj.jdbc.Driver
-    # tomcat DBCP에서 hikari DBCP로 변경됨 : 미사용 connection 회수 기능 제공
     hikari:
       maximum-pool-size: 20
   batch:
     jdbc:
-      initialize-schema: always  # 테이블을 자동 생성
+      initialize-schema: always
