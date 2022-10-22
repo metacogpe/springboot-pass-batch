@@ -1,0 +1,10 @@
+# 쿼리를 로깅으로 볼 수 있게 하는 속성 설정
+spring:
+  jpa:
+    show-sql: true   # sql 보여 주는 의도
+    properties:
+      hibernate:
+        format_sql: true   # sql 을 보기 편하게 포맷팅
+logging:
+  level:
+    org.hibernate.type.descriptor.sql: trace    # sql 로깅 시 파라미터 값까지 보여 줌
